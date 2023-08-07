@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: scrapstationpipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: scrapstationpipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: scrapstationpipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: scrapstationpipelinesjavascriptdocker 
+          image: liukessssssss.azurecr.io/scrapstationpipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
